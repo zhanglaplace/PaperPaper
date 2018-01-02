@@ -24,7 +24,7 @@
 直方图均衡化,去均值除方差。  
   样本扩增(论文5.2),由于FER数据库包含35000+的图片，因此作者采用fer数据库进行预训练，作者对数据进行了随机的旋转，从而生成了更多的样本，
 使得网络训练的结果更具有鲁棒性。
- ![]()
+ ![https://github.com/zhanglaplace/PaperPaper/blob/master/Expression/imgs/%5Bacmi%202015%5DImage%20based%20Static%20Facial%20Expression%20Recognition%20with%20Multiple%20Deep%20Network%20Learning_1.png](https://github.com/zhanglaplace/PaperPaper/blob/master/Expression/imgs/%5Bacmi%202015%5DImage%20based%20Static%20Facial%20Expression%20Recognition%20with%20Multiple%20Deep%20Network%20Learning_1.png)
 
 
 ### CNNModel
