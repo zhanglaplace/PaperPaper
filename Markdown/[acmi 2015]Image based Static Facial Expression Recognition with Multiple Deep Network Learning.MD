@@ -61,5 +61,5 @@ $$ CNN网络结构图 $$
   预训练+提升的级联方式对最终的识别效果有效。同时，样本扩增对实验提升也是有作用的。
 
   >本文作者： 张峰 </br>
-  >本文链接： [http://www.enjoyai.site/2018/01/08/](http://www.enjoyai.site/2018/01/08/[acmi%202015]Image%20based%20Static%20Facial%20Expression%20Recognition%20with%20Multiple%20Deep%20Network%20Learning/) </br>
+  >本文链接： [http://www.enjoyai.site/2018/01/08/](http://www.enjoyai.site/2018/01/08/Image%20based%20Static%20Facial%20Expression%20Recognition%20with%20Multiple%20Deep%20Network%20Learning/) </br>
   >版权声明： 本博客所有文章，均采用 CC BY-NC-SA 3.0 许可协议。转载请注明出处！
