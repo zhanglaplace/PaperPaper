@@ -25,7 +25,8 @@
   样本扩增(论文5.2),由于FER数据库包含35000+的图片，因此作者采用fer数据库进行预训练，作者对数据进行了随机的旋转，从而生成了更多的样本,使得网络训练的结果更具有鲁棒性。，样本生成公式以及效果图如下图所示:
  ![https://github.com/zhanglaplace/PaperPaper/blob/master/Expression/imgs/%5Bacmi%202015%5DImage%20based%20Static%20Facial%20Expression%20Recognition%20with%20Multiple%20Deep%20Network%20Learning_1.png](https://github.com/zhanglaplace/PaperPaper/blob/master/Expression/imgs/%5Bacmi%202015%5DImage%20based%20Static%20Facial%20Expression%20Recognition%20with%20Multiple%20Deep%20Network%20Learning_1.png)
   ![https://github.com/zhanglaplace/PaperPaper/blob/master/Expression/imgs/%5Bacmi%202015%5DImage%20based%20Static%20Facial%20Expression%20Recognition%20with%20Multiple%20Deep%20Network%20Learning_2.png](https://github.com/zhanglaplace/PaperPaper/blob/master/Expression/imgs/%5Bacmi%202015%5DImage%20based%20Static%20Facial%20Expression%20Recognition%20with%20Multiple%20Deep%20Network%20Learning_2.png)
-    ![https://github.com/zhanglaplace/PaperPaper/blob/master/Expression/imgs/%5Bacmi%202015%5DImage%20based%20Static%20Facial%20Expression%20Recognition%20with%20Multiple%20Deep%20Network%20Learning_9.png](https://github.com/zhanglaplace/PaperPaper/blob/master/Expression/imgs/%5Bacmi%202015%5DImage%20based%20Static%20Facial%20Expression%20Recognition%20with%20Multiple%20Deep%20Network%20Learning_9.png)
+  ![https://github.com/zhanglaplace/PaperPaper/blob/master/Expression/imgs/%5Bacmi%202015%5DImage%20based%20Static%20Facial%20Expression%20Recognition%20with%20Multiple%20Deep%20Network%20Learning_9.png](https://github.com/zhanglaplace/PaperPaper/blob/master/Expression/imgs/%5Bacmi%202015%5DImage%20based%20Static%20Facial%20Expression%20Recognition%20with%20Multiple%20Deep%20Network%20Learning_9.png)
+ $$ 样本添加扰动后生成的图样与原始图样的对比 $$
 
 
 
@@ -35,11 +36,12 @@
   5个conv+relu(step:1),3个stochastic pooling层(kernel_size:3*3,step:2),3个全连接层次(带relu+dropout)+softmax,随机初始化参数.
  采用sgd优化方式,batch_size：128.
    ![https://github.com/zhanglaplace/PaperPaper/blob/master/Expression/imgs/%5Bacmi%202015%5DImage%20based%20Static%20Facial%20Expression%20Recognition%20with%20Multiple%20Deep%20Network%20Learning_10.png](https://github.com/zhanglaplace/PaperPaper/blob/master/Expression/imgs/%5Bacmi%202015%5DImage%20based%20Static%20Facial%20Expression%20Recognition%20with%20Multiple%20Deep%20Network%20Learning_10.png)
-
+$$ CNN网络结构图 $$
 #### 损失函数与级联思想
    损失函数为softmaxWithLoss，只不过计算的时候一个样本会与其生成的样本loss一起计算，整个网络用FER数据库进行预训练(base_lr:0.005)，当loss突然增加25%或者连续5次观察loss发现loss上升，则手动的减小学习率，最小的学习率设置为0.0001.
    由于随机初始化参数，因此作者测试的时候，对多个网络进行级联，从而提高测试的准确率.
    ![https://github.com/zhanglaplace/PaperPaper/blob/master/Expression/imgs/%5Bacmi%202015%5DImage%20based%20Static%20Facial%20Expression%20Recognition%20with%20Multiple%20Deep%20Network%20Learning_3.png](https://github.com/zhanglaplace/PaperPaper/blob/master/Expression/imgs/%5Bacmi%202015%5DImage%20based%20Static%20Facial%20Expression%20Recognition%20with%20Multiple%20Deep%20Network%20Learning_3.png)
+   $$ 测试时级联CNN网络结构图 $$
    相比较简单的加权投票平均的思想，作者认为可以通过学习策略，来决定网络的具体权重。所以提出了一个级联的似然函数，实际可以理解为根据各个网络的输出去学习一个全连接层.其中||w|| == 1.
 
 ### 实验结果
@@ -57,3 +59,7 @@
 
 ### 结论
   预训练+提升的级联方式对最终的识别效果有效。同时，样本扩增对实验提升也是有作用的。
+
+  >本文作者： 张峰
+  >本文链接： [http://www.enjoyai.site/2018/01/08/](http://www.enjoyai.site/2018/01/08/[acmi%202015]Image%20based%20Static%20Facial%20Expression%20Recognition%20with%20Multiple%20Deep%20Network%20Learning/)
+  >版权声明： 本博客所有文章，均采用 CC BY-NC-SA 3.0 许可协议。转载请注明出处！
