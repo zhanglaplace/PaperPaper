@@ -56,7 +56,7 @@
   ![10.png](https://github.com/zhanglaplace/PaperPaper/blob/master/Expression/imgs_2/Island%20Loss%20for%20Learning%20Discriminative%20Features%20in%20Facial%20Expression%20Recognition_10.png)
   $$ 特征可视化 $$
 
-  ![16.png](https://github.com/zhanglaplace/PaperPaper/blob/master/Expression/imgs_2/Island%20Loss%20for%20Learning%20Discriminative%20Features%20in%20Facial%20Expression%20Recognition_16.png)
+  \qquad \qquad ![16.png](https://github.com/zhanglaplace/PaperPaper/blob/master/Expression/imgs_2/Island%20Loss%20for%20Learning%20Discriminative%20Features%20in%20Facial%20Expression%20Recognition_16.png)
   $$ 不同loss的类别距离 $$
 
 - CK+: 7表情94.35%
